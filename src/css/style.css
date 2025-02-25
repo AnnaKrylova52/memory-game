@@ -140,3 +140,17 @@ button:hover {
   color: #e5a290;
 }
 
+#value{
+  padding: 8px 20px;
+  margin-right: 5px;
+  border-radius: 4px;
+  background: #989aa4;
+  color: #f7f9fa;
+  border: 0;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+#value:hover {
+  background: #7a7d8e;;
+}

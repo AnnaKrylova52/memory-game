@@ -16,6 +16,7 @@ export const SELECTORS = {
     moves : document.querySelector(".moves"),
     timer : document.querySelector(".timer"),
     start : document.querySelector("button"),
-    win : document.querySelector(".win")
+    win : document.querySelector(".win"),
+    
 
 }

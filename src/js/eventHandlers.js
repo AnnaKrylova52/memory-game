@@ -1,4 +1,4 @@
-import { cardAction, startGame } from "./game";
+import { cardAction } from "./game";
 
 
 
