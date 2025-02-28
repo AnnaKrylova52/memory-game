@@ -1,4 +1,4 @@
-import {  startGame } from "./game";
+import { end, generateGame, startGame } from "./game";
 import { SELECTORS } from "./selectors";
 
 // your code
