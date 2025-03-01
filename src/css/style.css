@@ -45,6 +45,7 @@ button:hover {
 /* контейнер игрового поля */
 .board-container {
   position: relative;
+  display: none;
 }
 
 /* игровое поле */

@@ -9,6 +9,8 @@ import {
   increaseCount,
   checkMatch,
   isSecondCardFlipped,
+  endOfTheGame,
+
 } from "./utils";
 
 export const generateGame = () => {
@@ -16,6 +18,7 @@ export const generateGame = () => {
   if (dimensions % 2 !== 0) {
     throw new Error("Размер поля должен быть четным");
   }
+  SELECTORS.board.innerHTML = '';
   const picks = pickRandom(EMOJIES, (dimensions * dimensions) / 2);
   const shuffleAndPickEmoji = shuffle([...picks, ...picks]);
 
@@ -28,13 +31,11 @@ export const generateGame = () => {
         </div>`;
     })
     .join("");
-
   SELECTORS?.board.insertAdjacentHTML("beforeend", cardHTML);
 };
 
 export const startGame = () => {
   if(STATE.isGameStarted) return;
-  
   STATE.isGameStarted = true;
 
   

@@ -157,6 +157,7 @@ export const win = () => {
 
   setTimeout(() => {
     win.style.display = "none";
+    hideBoard();
   }, 5000);
 };
 
@@ -168,12 +169,18 @@ export const removeMatched = () => {
 };
 
 export const setGridTemplateColumns = (columns) => {
-  const board = SELECTORS?.board; // Предполагается, что SELECTORS.board указывает на ваш элемент
+  const board = SELECTORS?.board; 
   if (board) {
     board.style.gridTemplateColumns = `repeat(${columns}, auto)`;
   }
 };
 
+export const showBoard = () => {
+    document.querySelector(".board-container").style.display = "block";
+ }
+ export const hideBoard = () => {
+  document.querySelector(".board-container").style.display = "none";
+ }
 export const boardSize = () => {
   let size = 0;
   const input = document?.querySelector("#value");
@@ -181,6 +188,7 @@ export const boardSize = () => {
   buttonValue.addEventListener("click", () => {
     size = input.value;
     SELECTORS?.board?.setAttribute("data-dimension", size);
+    showBoard();
     setGridTemplateColumns(size);
     generateGame();
 
